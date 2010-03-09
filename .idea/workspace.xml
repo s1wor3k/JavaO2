@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="0b423a95-14f7-4a97-bb9c-0716c1fa4f7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/model/BuddyList.java" afterPath="$PROJECT_DIR$/src/pl/jo2/model/BuddyList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/xstream_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/xstream_1_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/model/Presence.java" afterPath="$PROJECT_DIR$/src/pl/jo2/model/Presence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistence.java" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/utils/FileBuddyListPersistence.java" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/FileBuddyListPersistence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
     </list>
     <ignored path="JavaO2.iws" />
     <ignored path=".idea/workspace.xml" />
