@@ -6,7 +6,6 @@ import pl.jo2.ui.BuddyListPanel;
 import pl.jo2.ui.ChatPanel;
 import pl.jo2.utils.BuddyListPersistence;
 import pl.jo2.utils.BuddyListPersistenceFactory;
-import pl.jo2.utils.comparators.BuddyByAlias;
 import pl.jo2.utils.comparators.BuddyByPresence;
 
 import javax.swing.*;
@@ -23,7 +22,7 @@ public class BuddyListControllerImpl {
 
   private BuddyList buddyList;
   private BuddyListPanel buddyListPanel;
-  private Map<Buddy, JFrame> openChatWindows = new HashMap<Buddy, JFrame>();
+  private Map<Buddy, JFrame> openedChatWindows = new HashMap<Buddy, JFrame>();
   private BuddyListPersistence buddyListPersistence = BuddyListPersistenceFactory.getBuddyListPersistence();
 
   public BuddyListControllerImpl() {
@@ -33,7 +32,6 @@ public class BuddyListControllerImpl {
       JOptionPane.showMessageDialog(null, "nie udalo sie wczytac listy kontaktow", "blad", JOptionPane.ERROR_MESSAGE);
       System.exit(1);
     }
-
   }
 
 
@@ -74,7 +72,7 @@ public class BuddyListControllerImpl {
 
   public void openChatWindow(final Buddy buddy) {
 
-    JFrame chatWindow = openChatWindows.get(buddy);
+    JFrame chatWindow = openedChatWindows.get(buddy);
     if (chatWindow != null) {
       chatWindow.requestFocus();
       return;
@@ -86,12 +84,12 @@ public class BuddyListControllerImpl {
     chatWindow.addWindowListener(new WindowAdapter() {
       @Override
       public void windowClosing(WindowEvent e) {
-        openChatWindows.remove(buddy);
+        openedChatWindows.remove(buddy);
       }
 
     });
     chatWindow.setVisible(true);
-    openChatWindows.put(buddy, chatWindow);
+    openedChatWindows.put(buddy, chatWindow);
   }
 
 

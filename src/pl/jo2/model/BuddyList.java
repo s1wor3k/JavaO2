@@ -100,8 +100,18 @@ public class BuddyList {
     Collections.sort(myBuddies, myComparator);
   }
 
-  public void addBuddies(List<Buddy> buddies) {
-    //TODO implementacja addBuddies(List)
+  public boolean addBuddies(List<Buddy> list) {
+    boolean modified = false;
+    for (Buddy b : list) {
+      if (!myBuddies.contains(b)) {
+        myBuddies.add(b);
+        modified = true;
+      }
+    }
+    if (modified) {
+      fireBuddyListChange();
+    }
+    return modified;
   }
 
 

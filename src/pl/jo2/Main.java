@@ -2,16 +2,10 @@ package pl.jo2;
 
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import pl.jo2.core.BuddyListControllerImpl;
-import pl.jo2.model.BuddyList;
 
 import javax.swing.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: przemek
- * Date: 2009-10-19
- * Time: 23:21:43
- */
+
 public class Main {
 
   public static void main(String args[]) {
@@ -29,8 +23,7 @@ public class Main {
       }
     });
 
-    //TODO buddyListController sam powinien tworzyc buddyList a nie zadac jej w konstruktorze
-    BuddyListControllerImpl buddyListController = new BuddyListControllerImpl();//, new BuddyListPanel());
+    BuddyListControllerImpl buddyListController = new BuddyListControllerImpl();
     buddyListController.showBuddyList();
   }
 }
