@@ -41,9 +41,8 @@ public class Buddy implements Serializable {
 
     Buddy buddy = (Buddy) o;
 
-    if (myContactInfo != null ? !myContactInfo.equals(buddy.myContactInfo) : buddy.myContactInfo != null) return false;
+    return !(myContactInfo != null ? !myContactInfo.equals(buddy.myContactInfo) : buddy.myContactInfo != null);
 
-    return true;
   }
 
   @Override

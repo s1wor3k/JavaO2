@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="0b423a95-14f7-4a97-bb9c-0716c1fa4f7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/Main.java" afterPath="$PROJECT_DIR$/src/pl/jo2/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/model/Buddy.java" afterPath="$PROJECT_DIR$/src/pl/jo2/model/Buddy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/utils/comparators/BuddyByPresence.java" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/comparators/BuddyByPresence.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/pl/jo2/model/ContactInfoTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pl/jo2/model/TlenContact.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/model/Presence.java" afterPath="$PROJECT_DIR$/src/pl/jo2/model/Presence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/utils/comparators/BuddyByAlias.java" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/comparators/BuddyByAlias.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/model/PresenceType.java" afterPath="$PROJECT_DIR$/src/pl/jo2/model/PresenceType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pl/jo2/model/ContactInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/pl/jo2/model/BuddyListTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pl/jo2/model/OrderBuddysByAlias.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/model/BuddyList.java" afterPath="$PROJECT_DIR$/src/pl/jo2/model/BuddyList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListCellRenderer.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListCellRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceMock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java" afterPath="$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/pl/jo2/utils/comparators/BuddyByPresenceTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/core/ContactsManagerMock.java" afterPath="$PROJECT_DIR$/src/pl/jo2/core/ContactsManagerMock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/pl/jo2/utils/BuddyListPeristenceTest.java" afterPath="$PROJECT_DIR$/test/pl/jo2/utils/BuddyListPeristenceTest.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="JavaO2.iws" />
@@ -93,7 +74,7 @@
       <file leaf-file-name="BuddyListControllerImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="4" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
+            <state line="26" column="31" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,7 +83,16 @@
       <file leaf-file-name="BuddyListPersistenceFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="91" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+            <state line="4" column="38" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Buddy.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pl/jo2/model/Buddy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="3" selection-start="710" selection-end="998" vertical-scroll-proportion="0.5658466">
               <folding />
             </state>
           </provider>
@@ -137,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuddyListPanel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BuddyListPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="29" selection-start="7103" selection-end="7103" vertical-scroll-proportion="-0.11143271">
+            <state line="200" column="29" selection-start="7103" selection-end="7103" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1268421969000" expanded="false" signature="11703:13075" placeholder="UI Designer generated code" />
               </folding>
@@ -178,7 +168,6 @@
       <list>
         <option value="$PROJECT_DIR$/test/pl/jo2/model/ConteactInfoTest.java" />
         <option value="$PROJECT_DIR$/test/pl/jo2/model/ContactInfoTest.java" />
-        <option value="$PROJECT_DIR$/src/pl/jo2/model/Buddy.java" />
         <option value="$PROJECT_DIR$/test/pl/jo2/utils/BuddyListPeristenceTest.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListCellRenderer.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/model/ContactInfo.java" />
@@ -192,6 +181,7 @@
         <option value="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceFactory.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/Main.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
+        <option value="$PROJECT_DIR$/src/pl/jo2/model/Buddy.java" />
       </list>
     </option>
   </component>
@@ -743,7 +733,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -1092,7 +1082,7 @@
     <frame x="0" y="24" width="1440" height="880" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32697546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32655826" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32384825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1103,8 +1093,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22573689" sideWeight="0.33923706" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30122215" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29475197" sideWeight="0.6680217" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29475197" sideWeight="0.66395664" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39972898" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32249323" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1112,7 +1103,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -1128,7 +1118,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="konfiguracja intellij" />
+    <option name="LAST_COMMIT_MESSAGE" value="rekonfiguracja klas modelu, dodane odpowiednie testy" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1152,6 +1142,7 @@
     <MESSAGE value="dialog do dodawania i edycji kontaktow" />
     <MESSAGE value="rename: BuddyListFilePersistence -&gt; FileBuddyListPersistence" />
     <MESSAGE value="konfiguracja intellij" />
+    <MESSAGE value="rekonfiguracja klas modelu, dodane odpowiednie testy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1191,11 +1182,6 @@
         <state line="69" column="0" selection-start="2161" selection-end="2161" vertical-scroll-proportion="0.76487255" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/model/Buddy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.21388102" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/jo2/model/Presence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="-0.062322944" />
@@ -1212,20 +1198,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="91" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="4" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,10 +1224,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="29" selection-start="7103" selection-end="7103" vertical-scroll-proportion="-0.11143271">
+        <state line="200" column="29" selection-start="7103" selection-end="7103" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1268421969000" expanded="false" signature="11703:13075" placeholder="UI Designer generated code" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="31" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/model/Buddy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="3" selection-start="710" selection-end="998" vertical-scroll-proportion="0.5658466">
+          <folding />
         </state>
       </provider>
     </entry>

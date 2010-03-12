@@ -6,7 +6,7 @@ import pl.jo2.utils.comparators.BuddyByAlias;
 import pl.jo2.utils.comparators.BuddyByPresence;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -32,9 +32,7 @@ public class BuddyListTest {
 
   private List<Buddy> createList(Buddy... buddies) {
     List<Buddy> list = new ArrayList<Buddy>();
-    for (Buddy b : buddies) {
-      list.add(b);
-    }
+    list.addAll(Arrays.asList(buddies));
     return list;
   }
 
