@@ -13,10 +13,9 @@ import java.util.Comparator;
 public class BuddyByAlias implements Comparator<Buddy> {
   @Override
   public int compare(Buddy o1, Buddy o2) {
-    if (o1.equals(o2)) {
+    if (o1 == o2) {
       return 0;
     }
-
-    return o1.getAlias().compareTo(o2.getAlias());
+    return o1.getContactInfo().getAlias().compareToIgnoreCase(o2.getContactInfo().getAlias());
   }
 }

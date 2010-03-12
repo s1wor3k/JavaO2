@@ -14,7 +14,7 @@ public class BuddyByPresence implements Comparator<Buddy> {
 
   @Override
   public int compare(Buddy o1, Buddy o2) {
-    if (o1.equals(o2)) {
+    if (o1 == o2) {
       return 0;
     }
 
@@ -22,7 +22,7 @@ public class BuddyByPresence implements Comparator<Buddy> {
       return o1.getPresence().getType().compareTo(o2.getPresence().getType());
 
     } else {
-      return o1.getAlias().compareTo(o2.getAlias());
+      return o1.getContactInfo().getAlias().compareToIgnoreCase(o2.getContactInfo().getAlias());
     }
   }
 }

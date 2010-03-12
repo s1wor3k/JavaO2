@@ -29,8 +29,8 @@ public class BuddyListCellRenderer extends DefaultListCellRenderer {
 
       StringBuilder sb = new StringBuilder();
       sb.append("<html><b>");
-      boolean aliasIsEmpty = (buddy.getAlias() == null || buddy.getAlias().isEmpty());
-      sb.append(aliasIsEmpty ? (buddy.getId() + "@" + buddy.getDomain()) : buddy.getAlias());
+      boolean aliasIsEmpty = (buddy.getContactInfo().getAlias() == null || buddy.getContactInfo().getAlias().isEmpty());
+      sb.append(aliasIsEmpty ? (buddy.getContactInfo().getLogin() + "@" + buddy.getContactInfo().getDomain()) : buddy.getContactInfo().getAlias());
       sb.append("</b><br>[");
       boolean statusIsEmpty = (buddy.getPresence().getStatus() == null || buddy.getPresence().getStatus().isEmpty());
       sb.append(statusIsEmpty ? buddy.getPresence().getType().getIdentifier() : buddy.getPresence().getStatus());

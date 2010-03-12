@@ -15,29 +15,4 @@ import java.util.List;
  */
 public class BuddyListPeristenceTest {
 
-  @Test
-  public void testSave(){
-    BuddyList bl = new BuddyList();
-    BuddyListPersistence persistence = new FileBuddyListPersistence();
-
-    try {
-      persistence.saveBuddies(bl.listBuddies());
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-
-  @Test
-  public void testLoad(){
-    BuddyListPersistence persistence = new FileBuddyListPersistence();
-    try {
-      List l =  persistence.loadBuddies();
-      Assert.assertNotNull(l);
-      System.out.println(l);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
-
-
 }

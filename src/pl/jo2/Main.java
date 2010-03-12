@@ -14,10 +14,23 @@ import javax.swing.*;
  */
 public class Main {
 
-  public static void main(String args[]) throws UnsupportedLookAndFeelException {
+  public static void main(String args[]) {
 
-    UIManager.setLookAndFeel(new NimbusLookAndFeel());
-    BuddyListControllerImpl buddyListController = new BuddyListControllerImpl(new BuddyList());//, new BuddyListPanel());
+
+    SwingUtilities.invokeLater(new Runnable(){
+
+      @Override
+      public void run() {
+        try {
+          UIManager.setLookAndFeel(new NimbusLookAndFeel());
+        } catch (UnsupportedLookAndFeelException e) {
+          e.printStackTrace();
+        }
+      }
+    });
+
+    //TODO buddyListController sam powinien tworzyc buddyList a nie zadac jej w konstruktorze
+    BuddyListControllerImpl buddyListController = new BuddyListControllerImpl();//, new BuddyListPanel());
     buddyListController.showBuddyList();
   }
 }

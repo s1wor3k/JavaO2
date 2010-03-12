@@ -1,13 +1,6 @@
 package pl.jo2.model;
 
-import pl.jo2.utils.FileBuddyListPersistence;
-import pl.jo2.utils.BuddyListPersistence;
-import pl.jo2.utils.comparators.BuddyByPresence;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,95 +9,117 @@ import java.util.TreeSet;
  * Time: 18:39:14
  */
 public class BuddyList {
-  private TreeSet<Buddy> buddies;
-  private ArrayList<BuddyListChangeListener> buddyListChangeListeners;
-  private BuddyListPersistence buddyListPersistence;
+  private List<Buddy> myBuddies;
+  private List<BuddyListChangeListener> myBuddyListChangeListeners = new ArrayList<BuddyListChangeListener>();
+  private Comparator<Buddy> myComparator;
+
 
   public BuddyList() {
-    buddies = new TreeSet<Buddy>(new BuddyByPresence());
-    buddyListChangeListeners = new ArrayList<BuddyListChangeListener>();
-    buddyListPersistence = new FileBuddyListPersistence();
-    List<Buddy> list = null;
-    try {
-      list = buddyListPersistence.loadBuddies();
-    } catch (IOException e) {
-      e.printStackTrace(); 
-    }
-    if (list == null || list.size() == 0) {
-      tmpCreateBuddyList();
-    } else {
-      for (Buddy b : list)
-        b.setPresence(new Presence(PresenceType.UNAVAILABLE, null));
-      buddies.addAll(list);
 
-    }
   }
 
-  private void tmpCreateBuddyList() {//TODO usunac jak bedzie mozliwosc wczytywania listy z pliku
-    System.out.println("tmp buddy list creator");
-    List<Buddy> list = new ArrayList<Buddy>(12);
-    list.add(new Buddy("edi.marfi", "tlen.pl", "Edi Marfi", new Presence(PresenceType.AVAILABLE, null)));
-    list.add(new Buddy("dzon.bon.dzowi", "tlen.pl", "Dzon Bon Dzowi", new Presence(PresenceType.DND, null)));
-    list.add(new Buddy("sztefen.myler", "tlen.pl", "Sztefen Myler", new Presence(PresenceType.XA, null)));
-    list.add(new Buddy("britnej.spirs", "tlen.pl", "Britnej Spirs", new Presence(PresenceType.INVISIBLE, null)));
-    list.add(new Buddy("doda", "tlen.pl", "Doda", new Presence(PresenceType.UNAVAILABLE, null)));
-    list.add(new Buddy("nergal", "tlen.pl", "Nergal", new Presence(PresenceType.CHAT, null)));
-    list.add(new Buddy("zbysiu", "tlen.pl", "Zbysiu", new Presence(PresenceType.AWAY, "załatwię na 90%")));
-    list.add(new Buddy("hristina.agilera", "tlen.pl", "Hristina Agilera", new Presence(PresenceType.AVAILABLE, null)));
-    list.add(new Buddy("lejdi.gaga", "tlen.pl", "Lejdi Gaga", new Presence(PresenceType.DND, null)));
-    list.add(new Buddy("erik.kartmanr", "tlen.pl", "Erik Kartman", new Presence(PresenceType.XA, null)));
-    list.add(new Buddy("stan.marsz", "tlen.pl", "Stan Marsz", new Presence(PresenceType.UNAVAILABLE, null)));
-    list.add(new Buddy("kajl.boflofski", "tlen.pl", "Kajl Broflofski", new Presence(PresenceType.CHAT, null)));
-    addBuddies(list);
+  public BuddyList(List<Buddy> list, Comparator<Buddy> c) {
+    this.myComparator = c;
+    this.myBuddies = new ArrayList<Buddy>(list.size());
+    for (Buddy b : list) {
+      if (myBuddies.contains(b))
+        continue;
+      myBuddies.add(b);
+    }
+    if (myBuddies.size() > 1) {
+      Collections.sort(myBuddies, myComparator);
+    }
+
+  }
+
+  //Public Interface
+
+  /**
+   * dodaje obiekt do listy ze statusem {@code PresenceType.UNAVAILABLE}
+   *
+   * @param b obiekt do dodania
+   * @return {@code true} jesli obiektu nie bylo wczesniej na liscie
+   */
+  public boolean addBuddy(Buddy b) {
+    return addBuddy(b, new Presence(PresenceType.UNAVAILABLE, null));
+  }
+
+  /**
+   * dodaje obiekt buddy do listy jesli jeszczo go tam nie ma
+   *
+   * @param b obiekt do dodania
+   * @param p status obiektu
+   * @return zwraca {@code true} jesli lista została zmieniona
+   */
+  public boolean addBuddy(Buddy b, Presence p) {
+    if (myBuddies.contains(b)) {
+      return false;
+    }
+    b.setPresence(p);
+    Iterator<Buddy> iterator = myBuddies.iterator();
+    int i = 0;
+    // sortujemy od najmniejszego do najwiekszego
+    while (iterator.hasNext() && myComparator.compare(b, iterator.next()) > 0) {
+      i++;
+    }
+    myBuddies.add(i, b);
+    fireBuddyListChange();
+    return true;
+  }
+
+  public void changePresence(Buddy buddy, Presence presence) {
+    int index = myBuddies.indexOf(buddy);
+    if (myBuddies.get(index).getPresence().equals(presence)) {
+      return;
+    }
+
+    Buddy tmpBuddy = myBuddies.remove(index);
+    addBuddy(tmpBuddy, presence);
   }
 
   public List<Buddy> listBuddies() {
-    ArrayList<Buddy> result = new ArrayList<Buddy>(buddies.size());
-    result.addAll(buddies);
-    return result;
+    return myBuddies;
   }
 
-  public void addBuddy(Buddy b) {
-    if (buddies.add(b)) {
+  public boolean deleteBuddy(Buddy b) {
+    if (myBuddies.remove(b)) {
       fireBuddyListChange();
-      persistBuddyList();
+      return true;
     }
+    return false;
+  }
+
+  public void setComparator(Comparator<Buddy> c) {
+    if (c == null)
+      throw new NullPointerException("comparator in BuddyList cannot be null, setComparator()");
+
+    if (c.getClass().equals(myComparator.getClass()))
+      return;
+
+    myComparator = c;
+    Collections.sort(myBuddies, myComparator);
   }
 
   public void addBuddies(List<Buddy> buddies) {
-    if (this.buddies.addAll(buddies)) {
-      fireBuddyListChange();
-      persistBuddyList();
-    }
+    //TODO implementacja addBuddies(List)
   }
 
-  public void deleteBuddy(Buddy b) {
-    if (buddies.remove(b)) {
-      fireBuddyListChange();
-      persistBuddyList();
-    }
-  }
 
-  private void persistBuddyList() {
-    try {
-      buddyListPersistence.saveBuddies(listBuddies());
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+  // rejestracja i powiadamianie obiektow - obserwatorow o zmianie zawartosci lub upozadkowania listy
 
   private void fireBuddyListChange() {
-    for (BuddyListChangeListener b : buddyListChangeListeners) {
+    for (BuddyListChangeListener b : myBuddyListChangeListeners) {
       b.buddyListChanged();
     }
   }
 
   public void addBuddyListChangeListener(BuddyListChangeListener b) {
-    buddyListChangeListeners.add(b);
+    myBuddyListChangeListeners.add(b);
   }
 
   public void removeBuddyListChangeListener(BuddyListChangeListener b) {
-    buddyListChangeListeners.remove(b);
+    myBuddyListChangeListeners.remove(b);
   }
+
 
 }

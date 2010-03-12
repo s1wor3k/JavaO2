@@ -32,22 +32,22 @@ public enum PresenceType {
   /**
    * wartosc jaka zostanie wysłana do serwera w celu ustawienia stanu
    */
-  private String identifier;
+  private String myIdentifier;
   /**
    * flaga okreslajaca czy stan jest tzw, stanem specjalnym.
    * true oznaczae ze jest, false natomiast oznacze ze ejst to stan podstawowy.
    * Stany specjalne róznia sie od podstawowych formatem wiadomości jaki nalezy
    * wysłac do serwera.
    */
-  private boolean special;
+  private boolean mySpecial;
 
   private PresenceType(String s, boolean b) {
-    this.identifier = s;
-    this.special = b;
+    this.myIdentifier = s;
+    this.mySpecial = b;
   }
 
   public String getIdentifier() {
-    return identifier;
+    return myIdentifier;
   }
 
   /**
@@ -55,10 +55,10 @@ public enum PresenceType {
    * @return zwraca wygenerowana wiadomosc
    */
   public String generateChangePresenceMessage() {
-    if (special) {
-      return MessageFormat.format(SPECIAL_MESSAGE, identifier);
+    if (mySpecial) {
+      return MessageFormat.format(SPECIAL_MESSAGE, myIdentifier);
     }
-    return MessageFormat.format(BASIC_MESSAGE, identifier);
+    return MessageFormat.format(BASIC_MESSAGE, myIdentifier);
   }
 
   /**
@@ -75,9 +75,9 @@ public enum PresenceType {
     } catch (UnsupportedEncodingException e) {
       throw new RuntimeException("nieobslugiwane kodowanie znakow", e);
     }
-    if (special) {
-      return MessageFormat.format(SPECIAL_MESSAGE_WITH_STATUS, identifier, urlEncodedStatus);
+    if (mySpecial) {
+      return MessageFormat.format(SPECIAL_MESSAGE_WITH_STATUS, myIdentifier, urlEncodedStatus);
     }
-    return MessageFormat.format(BASIC_MESSAGE_WITH_STATUS, identifier, urlEncodedStatus);
+    return MessageFormat.format(BASIC_MESSAGE_WITH_STATUS, myIdentifier, urlEncodedStatus);
   }
 }

@@ -4,30 +4,36 @@ import pl.jo2.model.Buddy;
 import pl.jo2.model.BuddyList;
 import pl.jo2.ui.BuddyListPanel;
 import pl.jo2.ui.ChatPanel;
+import pl.jo2.utils.BuddyListPersistence;
+import pl.jo2.utils.BuddyListPersistenceFactory;
+import pl.jo2.utils.comparators.BuddyByAlias;
+import pl.jo2.utils.comparators.BuddyByPresence;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by IntelliJ IDEA.
- * User: przemek
- * Date: 2009-11-21
- * Time: 22:14:05
- */
+
 public class BuddyListControllerImpl {
   //TODO jak juz bede wiedzial jakie to ma miec metody to wyciagne je do interfejsu
 
   private BuddyList buddyList;
   private BuddyListPanel buddyListPanel;
   private Map<Buddy, JFrame> openChatWindows = new HashMap<Buddy, JFrame>();
+  private BuddyListPersistence buddyListPersistence = BuddyListPersistenceFactory.getBuddyListPersistence();
 
-  public BuddyListControllerImpl(BuddyList buddyList) {
-    this.buddyList = buddyList;
-    //this.buddyListPanel = buddyListPanel;
+  public BuddyListControllerImpl() {
+    try {
+      this.buddyList = new BuddyList(buddyListPersistence.loadBuddies(), new BuddyByPresence());
+    } catch (IOException e) {
+      JOptionPane.showMessageDialog(null, "nie udalo sie wczytac listy kontaktow", "blad", JOptionPane.ERROR_MESSAGE);
+      System.exit(1);
+    }
+
   }
 
 
@@ -74,7 +80,7 @@ public class BuddyListControllerImpl {
       return;
     }
 
-    chatWindow = new JFrame(buddy.getAlias());
+    chatWindow = new JFrame(buddy.getContactInfo().getAlias());
     chatWindow.setContentPane(new ChatPanel().getMainPanel());
     chatWindow.setSize(200, 200);
     chatWindow.addWindowListener(new WindowAdapter() {

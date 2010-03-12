@@ -2,79 +2,59 @@ package pl.jo2.model;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: przemek
- * Date: 2009-10-20
- * Time: 18:55:00
- */
 public class Buddy implements Serializable {
   /**
-   * identyfikator - login tlen
+   * dane kontaktu jak login, domena czy alias
    */
-  private String id;
+  private final ContactInfo myContactInfo;
+
   /**
-   * domana, na razie tylko tlen.pl ale pozniej kto wie
+   * status kontaktu - dostepnosc plus opis
    */
-  private String domain;
-  /**
-   * tekst wyswietlany na liscie kontaktow
-   */
-  private String alias;
-  /**
-   * stan kontaktu
-   */
-  private Presence presence;
+  private Presence myPresence;
 
-  public Buddy() {
+  public Buddy(ContactInfo ci) {
+    this(ci, new Presence(PresenceType.UNAVAILABLE, null));
   }
 
-  public Buddy(String id, String domain, String alias, Presence presence) {
-    this.id = id;
-    this.domain = domain;
-    this.alias = alias;
-    this.presence = presence;
+  public Buddy(ContactInfo ci, Presence p) {
+    this.myContactInfo = ci;
+    this.myPresence = p;
   }
 
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  public String getDomain() {
-    return domain;
-  }
-
-  public void setDomain(String domain) {
-    this.domain = domain;
-  }
-
-  public String getAlias() {
-    return alias;
-  }
-
-  public void setAlias(String alias) {
-    this.alias = alias;
+  public ContactInfo getContactInfo() {
+    return myContactInfo;
   }
 
   public Presence getPresence() {
-    return presence;
+    return myPresence;
   }
 
   public void setPresence(Presence presence) {
-    this.presence = presence;
+    this.myPresence = presence;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    Buddy buddy = (Buddy) o;
+
+    if (myContactInfo != null ? !myContactInfo.equals(buddy.myContactInfo) : buddy.myContactInfo != null) return false;
+
+    return true;
+  }
+
+  @Override
+  public int hashCode() {
+    return myContactInfo != null ? myContactInfo.hashCode() : 0;
   }
 
   @Override
   public String toString() {
     return "Buddy{" +
-      "id='" + id + '\'' +
-      ", domain='" + domain + '\'' +
-      ", alias='" + alias + '\'' +
-      ", icons.presence=" + presence +
-      '}';
+        "contactInfo=" + myContactInfo +
+        ", presence=" + myPresence + '}';
   }
 }
