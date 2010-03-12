@@ -109,6 +109,7 @@ public class BuddyList {
       }
     }
     if (modified) {
+      Collections.sort(myBuddies, myComparator);
       fireBuddyListChange();
     }
     return modified;

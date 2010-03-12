@@ -30,12 +30,6 @@ public class BuddyListTest {
     bl = new BuddyList(createList(BUDDY_A, BUDDY_B, BUDDY_C), new BuddyByPresence());
   }
 
-  private List<Buddy> createList(Buddy... buddies) {
-    List<Buddy> list = new ArrayList<Buddy>();
-    list.addAll(Arrays.asList(buddies));
-    return list;
-  }
-
   @Test
   public void sortOnCreateTest() {
     BuddyList testBuddyList = new BuddyList(createList(BUDDY_C, BUDDY_A, BUDDY_B, BUDDY_D),
@@ -68,6 +62,14 @@ public class BuddyListTest {
   }
 
   @Test
+  public void sortOnMultiAddTest() {
+    assertTrue(bl.addBuddies(Arrays.asList(BUDDY_D, BUDDY_E)));
+    assertEquals(BUDDY_D, bl.listBuddies().get(2));
+    assertEquals(BUDDY_E, bl.listBuddies().get(3));
+
+  }
+
+  @Test
   public void sortOnEditTest() {
     assertEquals(BUDDY_A, bl.listBuddies().get(1));
     bl.changePresence(BUDDY_A, new Presence(PresenceType.AVAILABLE, null));
@@ -81,6 +83,12 @@ public class BuddyListTest {
     assertEquals(BUDDY_A, buddies.get(0));
     assertEquals(BUDDY_B, buddies.get(1));
     assertEquals(BUDDY_C, buddies.get(2));
+  }
+
+  private List<Buddy> createList(Buddy... buddies) {
+    List<Buddy> list = new ArrayList<Buddy>();
+    list.addAll(Arrays.asList(buddies));
+    return list;
   }
 
 }
