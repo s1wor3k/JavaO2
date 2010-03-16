@@ -4,16 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistence.java" line="26" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="0b423a95-14f7-4a97-bb9c-0716c1fa4f7b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/icons/toolbar/clear.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/Main.java" afterPath="$PROJECT_DIR$/src/pl/jo2/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.form" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jgoodies_looks_2_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jgoodies_looks_2_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/ToolbarButton.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/ToolbarButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaO2-main.iml" afterPath="$PROJECT_DIR$/JavaO2-main.iml" />
-    </list>
+    <list default="true" readonly="true" id="0b423a95-14f7-4a97-bb9c-0716c1fa4f7b" name="Default" comment="" />
     <ignored path="JavaO2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,7 +91,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="70" column="28" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1268737058000" expanded="false" signature="10622:12114" placeholder="UI Designer generated code" />
+                <marker date="1268739070000" expanded="false" signature="10622:12114" placeholder="UI Designer generated code" />
               </folding>
             </state>
           </provider>
@@ -686,7 +677,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1440" height="876" extended-state="0" />
+    <frame x="0" y="24" width="1440" height="876" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292595" sideWeight="0.67302454" order="2" side_tool="false" content_ui="tabs" />
@@ -725,7 +716,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="addBuddiesTest + korekta dzialania" />
+    <option name="LAST_COMMIT_MESSAGE" value="search panel" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -753,6 +744,7 @@
     <MESSAGE value="bzdury" />
     <MESSAGE value="addBuddies + bzdury" />
     <MESSAGE value="addBuddiesTest + korekta dzialania" />
+    <MESSAGE value="search panel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -826,7 +818,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="28" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1268737058000" expanded="false" signature="10622:12114" placeholder="UI Designer generated code" />
+            <marker date="1268739070000" expanded="false" signature="10622:12114" placeholder="UI Designer generated code" />
           </folding>
         </state>
       </provider>
