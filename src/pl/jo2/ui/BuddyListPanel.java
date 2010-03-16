@@ -30,6 +30,8 @@ public class BuddyListPanel implements BuddyListChangeListener {
   private JTextField searchTextField;
   private JButton presenceButton;
   private JButton settingsButton;
+  private JButton cButton;
+  private JPanel searchPanel;
   private JPopupMenu presencePopup;
   private JPopupMenu settingsPopup;
   private JPopupMenu buddiesPopup;
@@ -59,9 +61,21 @@ public class BuddyListPanel implements BuddyListChangeListener {
     buddies.setModel(createModel(buddyList.listBuddies()));
   }
 
+  private void setupSearchPanel() {
+    searchPanel = new JPanel();
+    searchPanel.setBorder(searchTextField.getBorder());
+    searchTextField.setBorder(null);
+    searchPanel.setBackground(searchTextField.getBackground());
+    cButton = new JButton(new ImageIcon("/home/przemek/clear.png"));
+    cButton.setBorderPainted(false);
+    cButton.setContentAreaFilled(false);
+    cButton.setFocusable(false);
+  }
+
   private void setupSearchTextField() {
     searchTextField = new JTextField();
     searchTextField.setToolTipText("search");
+    searchTextField.setOpaque(false);
     // document listener dla listy
     //TODO filtrowanie listy na stale, bo znika przy odswiezeniu
     searchTextField.getDocument().addDocumentListener(new DocumentListener() {
@@ -299,6 +313,7 @@ public class BuddyListPanel implements BuddyListChangeListener {
     setupSettingsButton();
     setupSettingPopup();
     setupBuddiestPopup();
+    setupSearchPanel();
   }
 
   @Override
@@ -326,9 +341,13 @@ public class BuddyListPanel implements BuddyListChangeListener {
     final JPanel panel2 = new JPanel();
     panel2.setLayout(new FormLayout("fill:p:grow,left:0dlu:noGrow,center:26px:noGrow,left:0dlu:noGrow,fill:26px:noGrow", "center:d:noGrow"));
     panel1.add(panel2, cc.xy(1, 1));
-    panel2.add(searchTextField, cc.xy(1, 1, CellConstraints.FILL, CellConstraints.FILL));
     panel2.add(presenceButton, cc.xy(3, 1, CellConstraints.FILL, CellConstraints.FILL));
     panel2.add(settingsButton, cc.xy(5, 1, CellConstraints.FILL, CellConstraints.FILL));
+    searchPanel.setLayout(new BorderLayout(0, 0));
+    panel2.add(searchPanel, cc.xy(1, 1, CellConstraints.FILL, CellConstraints.FILL));
+    searchTextField.setMargin(new Insets(0, 3, 0, 0));
+    searchPanel.add(searchTextField, BorderLayout.CENTER);
+    searchPanel.add(cButton, BorderLayout.EAST);
   }
 
   /**

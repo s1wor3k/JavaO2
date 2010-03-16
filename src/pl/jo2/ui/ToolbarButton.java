@@ -54,12 +54,14 @@ public class ToolbarButton extends JButton {
     public void mouseEntered(MouseEvent e) {
       JButton b = (JButton) e.getComponent();
       b.setContentAreaFilled(true);
+      b.setBorderPainted(true);
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
       JButton b = (JButton) e.getComponent();
       b.setContentAreaFilled(false);
+      b.setBorderPainted(false);
     }
   }
 }

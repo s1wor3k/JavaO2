@@ -1,28 +1,17 @@
 package pl.jo2;
 
+import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import pl.jo2.core.BuddyListControllerImpl;
-
 import javax.swing.*;
 
 
 public class Main {
 
-  public static void main(String args[]) {
+  public static void main(String args[]) throws UnsupportedLookAndFeelException {
 
-
-    SwingUtilities.invokeLater(new Runnable(){
-
-      @Override
-      public void run() {
-        try {
-          UIManager.setLookAndFeel(new NimbusLookAndFeel());
-        } catch (UnsupportedLookAndFeelException e) {
-          e.printStackTrace();
-        }
-      }
-    });
-
+//    UIManager.setLookAndFeel(new NimbusLookAndFeel());
+    UIManager.setLookAndFeel(new Plastic3DLookAndFeel());
     BuddyListControllerImpl buddyListController = new BuddyListControllerImpl();
     buddyListController.showBuddyList();
   }
