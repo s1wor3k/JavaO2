@@ -15,12 +15,7 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -30,7 +25,7 @@ public class BuddyListPanel implements BuddyListChangeListener {
   private JTextField searchTextField;
   private JButton presenceButton;
   private JButton settingsButton;
-  private JButton cButton;
+  private JButton clearSearchFieldButton;
   private JPanel searchPanel;
   private JPopupMenu presencePopup;
   private JPopupMenu settingsPopup;
@@ -66,10 +61,19 @@ public class BuddyListPanel implements BuddyListChangeListener {
     searchPanel.setBorder(searchTextField.getBorder());
     searchTextField.setBorder(null);
     searchPanel.setBackground(searchTextField.getBackground());
-    cButton = new JButton(new ImageIcon("/home/przemek/clear.png"));
-    cButton.setBorderPainted(false);
-    cButton.setContentAreaFilled(false);
-    cButton.setFocusable(false);
+    
+    clearSearchFieldButton = new JButton(Icons.clear_search_field);
+    clearSearchFieldButton.setBorderPainted(false);
+    clearSearchFieldButton.setContentAreaFilled(false);
+    clearSearchFieldButton.setFocusable(false);
+    clearSearchFieldButton.setMargin(new Insets(0, 0, 0, 0));
+    clearSearchFieldButton.setVisible(false);
+    clearSearchFieldButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        searchTextField.setText("");
+      }
+    });
   }
 
   private void setupSearchTextField() {
@@ -80,6 +84,8 @@ public class BuddyListPanel implements BuddyListChangeListener {
     //TODO filtrowanie listy na stale, bo znika przy odswiezeniu
     searchTextField.getDocument().addDocumentListener(new DocumentListener() {
       public void insertUpdate(DocumentEvent e) {
+        if (!clearSearchFieldButton.isVisible())
+          clearSearchFieldButton.setVisible(true);
         String documentText = searchTextField.getText();
         ListModel listModel = filterBuddys(buddies.getModel(), documentText);
         buddies.setModel(listModel);
@@ -92,6 +98,8 @@ public class BuddyListPanel implements BuddyListChangeListener {
 
       public void removeUpdate(DocumentEvent e) {
         String documentText = searchTextField.getText();
+        if (documentText.length() == 0 && clearSearchFieldButton.isVisible())
+          clearSearchFieldButton.setVisible(false);
         ListModel listModel = filterBuddys(createModel(buddyList.listBuddies()), documentText);
         buddies.setModel(listModel);
         if (listModel.getSize() == 1 && listModel.getElementAt(0) instanceof String) {
@@ -347,7 +355,7 @@ public class BuddyListPanel implements BuddyListChangeListener {
     panel2.add(searchPanel, cc.xy(1, 1, CellConstraints.FILL, CellConstraints.FILL));
     searchTextField.setMargin(new Insets(0, 3, 0, 0));
     searchPanel.add(searchTextField, BorderLayout.CENTER);
-    searchPanel.add(cButton, BorderLayout.EAST);
+    searchPanel.add(clearSearchFieldButton, BorderLayout.EAST);
   }
 
   /**

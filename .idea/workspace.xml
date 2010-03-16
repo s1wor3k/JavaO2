@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="0b423a95-14f7-4a97-bb9c-0716c1fa4f7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.form" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.form" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.java" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/utils/IconPath.properties" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/IconPath.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/utils/Icons.java" afterPath="$PROJECT_DIR$/src/pl/jo2/utils/Icons.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.form" afterPath="$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.form" />
     </list>
     <ignored path="JavaO2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuddyListControllerImpl.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BuddyListControllerImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="18" selection-start="2033" selection-end="2033" vertical-scroll-proportion="0.13203463">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,17 +97,19 @@
       <file leaf-file-name="BuddyListPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="28" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0">
+            <state line="43" column="156" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolbarButton.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/ToolbarButton.java">
+      <file leaf-file-name="AddOrEditBuddyDialog.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="30" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="19" column="19" selection-start="496" selection-end="511" vertical-scroll-proportion="0.032327585">
+              <folding>
+                <marker date="1268746872000" expanded="false" signature="1704:4511" placeholder="UI Designer generated code" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,22 +124,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/pl/jo2/model/Presence.java" />
-        <option value="$PROJECT_DIR$/src/pl/jo2/utils/comparators/BuddyByPresence.java" />
-        <option value="$PROJECT_DIR$/test/pl/jo2/utils/comparators/BuddyByPresenceTest.java" />
-        <option value="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceMock.java" />
-        <option value="$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistenceFactory.java" />
-        <option value="$PROJECT_DIR$/src/pl/jo2/model/Buddy.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/model/ContactInfo.java" />
         <option value="$PROJECT_DIR$/test/pl/jo2/model/BuddyListTest.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/model/BuddyList.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/ui/TextFieldStud.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/ui/TextFieldStud.form" />
         <option value="$PROJECT_DIR$/src/pl/jo2/ui/ToolbarButton.java" />
-        <option value="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/Main.java" />
         <option value="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.form" />
         <option value="$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java" />
+        <option value="$PROJECT_DIR$/src/pl/jo2/utils/Icons.java" />
+        <option value="$PROJECT_DIR$/src/pl/jo2/utils/IconPath.properties" />
+        <option value="$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.form" />
+        <option value="$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.java" />
       </list>
     </option>
   </component>
@@ -219,16 +226,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,10 +233,6 @@
               <option name="myItemId" value="JavaO2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -251,72 +244,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jo2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jo2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaO2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -347,7 +282,24 @@
       <recent name="pl.jo2.model.BuddyListTest" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.run-JavaO2">
+  <component name="RunManager" selected="Application.AddOrEditBuddyDialog">
+    <configuration default="false" name="AddOrEditBuddyDialog" type="Application" factoryName="Application" temporary="true">
+      <extension name="snapshooter" />
+      <option name="MAIN_CLASS_NAME" value="pl.jo2.ui.AddOrEditBuddyDialog" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaO2-main" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -535,10 +487,11 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.run-JavaO2" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.run-tests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Test Model" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.AddOrEditBuddyDialog" />
+      <item index="1" class="java.lang.String" itemvalue="Application.run-JavaO2" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.run-tests" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Test Model" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -587,23 +540,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="876" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32288828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14018692" sideWeight="0.67302454" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32288828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14018692" sideWeight="0.84196186" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39645776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32791328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3201635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3201635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833788" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29475197" sideWeight="0.33333334" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997844" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30122215" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25880662" sideWeight="0.66757494" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25880662" sideWeight="0.6702997" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3174387" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14850137" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292595" sideWeight="0.67302454" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31128684" sideWeight="0.84196186" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32288828" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -625,7 +578,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="line separator" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddBuddy dialog" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -655,6 +608,7 @@
     <MESSAGE value="addBuddiesTest + korekta dzialania" />
     <MESSAGE value="search panel" />
     <MESSAGE value="line separator" />
+    <MESSAGE value="AddBuddy dialog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -664,31 +618,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/utils/BuddyListPersistence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="157" selection-end="157" vertical-scroll-proportion="0.1056338" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/ChatPanel.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../programy/JDK/src.zip!/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="747" column="19" selection-start="28118" selection-end="28118" vertical-scroll-proportion="0.33236575" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../programy/JDK/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1845" column="16" selection-start="70048" selection-end="70048" vertical-scroll-proportion="0.33236575" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../../programy/JDK/src.zip!/javax/swing/plaf/basic/BasicTextUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="22" selection-start="3402" selection-end="3402" vertical-scroll-proportion="1.2889519" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../../programy/JDK/src.zip!/javax/swing/plaf/TextUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="24" selection-start="485" selection-end="485" vertical-scroll-proportion="0.23371105" />
@@ -719,36 +648,52 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="57" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="28" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/ToolbarButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="30" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/utils/Icons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="66" selection-start="659" selection-end="659" vertical-scroll-proportion="-2.1235955">
-          <folding />
-        </state>
+        <state line="33" column="50" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.6161473" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/utils/IconPath.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="19" selection-start="24" selection-end="24" vertical-scroll-proportion="0.02124646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="57" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/jo2/core/BuddyListControllerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="18" selection-start="2033" selection-end="2033" vertical-scroll-proportion="0.13203463">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/BuddyListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="156" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/jo2/ui/AddOrEditBuddyDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="19" selection-start="496" selection-end="511" vertical-scroll-proportion="0.032327585">
+          <folding>
+            <marker date="1268746872000" expanded="false" signature="1704:4511" placeholder="UI Designer generated code" />
+          </folding>
         </state>
       </provider>
     </entry>

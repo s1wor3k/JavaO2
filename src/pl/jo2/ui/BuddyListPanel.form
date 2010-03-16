@@ -71,7 +71,7 @@
                   <margin top="0" left="3" bottom="0" right="0"/>
                 </properties>
               </component>
-              <component id="11bb4" class="javax.swing.JButton" binding="cButton" custom-create="true" default-binding="true">
+              <component id="11bb4" class="javax.swing.JButton" binding="clearSearchFieldButton" custom-create="true" default-binding="true">
                 <constraints border-constraint="East"/>
                 <properties/>
               </component>

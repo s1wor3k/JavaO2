@@ -4,14 +4,16 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class AddOrEditBuddyDialog extends JDialog {
   private JPanel contentPane;
-  private JButton buttonOK;
-  private JButton buttonCancel;
   private JTextField textField1;
   private JTextField textField2;
+  private JTextField textField3;
+  private JButton buttonOK;
+  private JButton buttonCancel;
 
   public AddOrEditBuddyDialog() {
     setContentPane(contentPane);
@@ -58,8 +60,10 @@ public class AddOrEditBuddyDialog extends JDialog {
 
   public static void main(String[] args) {
     AddOrEditBuddyDialog dialog = new AddOrEditBuddyDialog();
-    dialog.pack();
+//    dialog.pack();
+    dialog.setSize(300, 200);
     dialog.setVisible(true);
+
     System.exit(0);
   }
 
@@ -79,30 +83,46 @@ public class AddOrEditBuddyDialog extends JDialog {
    */
   private void $$$setupUI$$$() {
     contentPane = new JPanel();
-    contentPane.setLayout(new FormLayout("fill:d:grow,left:4dlu:noGrow,fill:max(d;4px):noGrow,left:4dlu:noGrow,fill:d:noGrow", "center:max(d;4px):grow,top:4dlu:noGrow,center:max(d;4px):noGrow"));
-    buttonOK = new JButton();
-    buttonOK.setText("OK");
-    CellConstraints cc = new CellConstraints();
-    contentPane.add(buttonOK, cc.xy(5, 3));
-    buttonCancel = new JButton();
-    buttonCancel.setText("Cancel");
-    contentPane.add(buttonCancel, cc.xy(3, 3));
+    contentPane.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
     final JPanel panel1 = new JPanel();
-    panel1.setLayout(new FormLayout("fill:d:noGrow,left:4dlu:noGrow,fill:d:grow", "center:d:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow"));
-    contentPane.add(panel1, cc.xyw(1, 1, 5, CellConstraints.DEFAULT, CellConstraints.FILL));
+    panel1.setLayout(new FormLayout("fill:p:noGrow,left:4dlu:noGrow,fill:max(d;4px):grow,left:8px:noGrow,fill:p:noGrow,left:4dlu:noGrow,fill:max(p;4px):noGrow", "center:d:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:max(d;4px):grow,top:4dlu:noGrow,center:max(d;4px):noGrow"));
+    CellConstraints cc = new CellConstraints();
+    contentPane.add(panel1, new CellConstraints(1, 1, 1, 1, CellConstraints.DEFAULT, CellConstraints.FILL, new Insets(10, 10, 10, 10)));
     final JLabel label1 = new JLabel();
-    label1.setText("Alias");
-    panel1.add(label1, cc.xy(1, 1));
-    textField1 = new JTextField();
-    panel1.add(textField1, cc.xy(3, 1, CellConstraints.FILL, CellConstraints.DEFAULT));
+    label1.setFont(new Font("Arial", Font.BOLD, 16));
+    label1.setHorizontalAlignment(0);
+    label1.setText("Add Buddy");
+    panel1.add(label1, cc.xyw(1, 1, 7));
     final JLabel label2 = new JLabel();
-    label2.setText("id");
+    label2.setHorizontalAlignment(4);
+    label2.setText("login");
     panel1.add(label2, cc.xy(1, 3));
-    textField2 = new JTextField();
-    panel1.add(textField2, cc.xy(3, 3, CellConstraints.FILL, CellConstraints.DEFAULT));
+    textField1 = new JTextField();
+    panel1.add(textField1, cc.xyw(3, 3, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
     final JLabel label3 = new JLabel();
-    label3.setText("");
-    contentPane.add(label3, cc.xy(1, 3, CellConstraints.DEFAULT, CellConstraints.FILL));
+    label3.setHorizontalAlignment(4);
+    label3.setText("domain");
+    panel1.add(label3, cc.xy(1, 5));
+    final JLabel label4 = new JLabel();
+    label4.setHorizontalAlignment(4);
+    label4.setText("alias");
+    panel1.add(label4, cc.xy(1, 7));
+    textField2 = new JTextField();
+    panel1.add(textField2, cc.xyw(3, 5, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
+    textField3 = new JTextField();
+    panel1.add(textField3, cc.xyw(3, 7, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
+    buttonCancel = new JButton();
+    buttonCancel.setText("cancel");
+    panel1.add(buttonCancel, cc.xy(5, 11));
+    buttonOK = new JButton();
+    buttonOK.setText("ok");
+    panel1.add(buttonOK, cc.xy(7, 11));
+    final JPanel panel2 = new JPanel();
+    panel2.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
+    panel1.add(panel2, cc.xy(3, 11, CellConstraints.DEFAULT, CellConstraints.FILL));
+    final JPanel panel3 = new JPanel();
+    panel3.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
+    panel1.add(panel3, cc.xyw(1, 9, 7, CellConstraints.DEFAULT, CellConstraints.FILL));
   }
 
   /**

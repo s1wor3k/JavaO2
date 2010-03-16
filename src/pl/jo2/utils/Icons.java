@@ -17,6 +17,7 @@ public class Icons {
   public static Map<PresenceType, Icon> small_presence_icons;
   public static Map<PresenceType, Icon> medium_presence_icons;
   public static Icon SETTINGS;
+  public static Icon clear_search_field;
 
 
   static {
@@ -31,6 +32,7 @@ public class Icons {
     }
 
     SETTINGS = IconLoader.loadIcon(bundle.getString("toolbar.settings"));
+    clear_search_field = IconLoader.loadIcon(bundle.getString("toolbar.clear.search"));
 
   }
 
