@@ -18,6 +18,7 @@ import java.util.Map;
 
 
 public class BuddyListControllerImpl {
+
   //TODO jak juz bede wiedzial jakie to ma miec metody to wyciagne je do interfejsu
 
   private BuddyList buddyList;

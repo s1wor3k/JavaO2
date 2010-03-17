@@ -2,31 +2,57 @@ package pl.jo2.ui;
 
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.looks.plastic.Plastic3DLookAndFeel;
+import pl.jo2.core.BuddyListControllerImpl;
+import pl.jo2.model.Buddy;
+import pl.jo2.model.ContactInfo;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class AddOrEditBuddyDialog extends JDialog {
-  private JPanel contentPane;
-  private JTextField textField1;
-  private JTextField textField2;
-  private JTextField textField3;
-  private JButton buttonOK;
-  private JButton buttonCancel;
+  private JPanel myContentPane;
+  private JTextField myLoginTextField;
+  private JTextField myDomainTextField;
+  private JTextField myAliasTextField;
+  private JButton mySaveButton;
+  private JButton myCancelButton;
+  private JLabel myLoginErrorLabel;
+  private JLabel myDomainErrorLabel;
+  private JLabel myAliasErrorLabel;
 
-  public AddOrEditBuddyDialog() {
-    setContentPane(contentPane);
+  private BuddyListControllerImpl myBuddyListController;
+
+  public AddOrEditBuddyDialog(BuddyListControllerImpl buddyListController) {
+    initDialog(buddyListController);
+  }
+
+  public AddOrEditBuddyDialog(Buddy buddy, BuddyListControllerImpl buddyListController) {
+    if (buddy == null) {
+      throw new NullPointerException("Param 'Buddy' of AddOrEditBuddyDialog constructor cannot be null!");
+    }
+    initDialog(buddyListController);
+    this.myLoginTextField.setText(buddy.getContactInfo().getLogin());
+    this.myDomainTextField.setText(buddy.getContactInfo().getDomain());
+    this.myAliasTextField.setText(buddy.getContactInfo().getAlias());
+  }
+
+  private void initDialog(BuddyListControllerImpl buddyListController) {
+    this.myBuddyListController = buddyListController;
+
+    setContentPane(myContentPane);
     setModal(true);
-    getRootPane().setDefaultButton(buttonOK);
-
-    buttonOK.addActionListener(new ActionListener() {
+    getRootPane().setDefaultButton(mySaveButton);
+    pack();
+    setSize(getSize().width + 20, getSize().height + 20);
+    mySaveButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         onOK();
       }
     });
 
-    buttonCancel.addActionListener(new ActionListener() {
+    myCancelButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         onCancel();
       }
@@ -41,7 +67,7 @@ public class AddOrEditBuddyDialog extends JDialog {
     });
 
 // call onCancel() on ESCAPE
-    contentPane.registerKeyboardAction(new ActionListener() {
+    myContentPane.registerKeyboardAction(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         onCancel();
       }
@@ -49,8 +75,33 @@ public class AddOrEditBuddyDialog extends JDialog {
   }
 
   private void onOK() {
-// add your code here
-    dispose();
+    boolean inputAreValid = validateInputs();
+
+    if (inputAreValid) {
+      dispose();
+    }
+  }
+
+  private boolean validateInputs() {
+    boolean result = true;
+    if (myLoginTextField.getText().length() <= 3) {
+      myLoginErrorLabel.setText("podaj login");
+      myLoginErrorLabel.setVisible(true);
+      result = false;
+    } else {
+      myLoginErrorLabel.setText("");
+      myLoginErrorLabel.setVisible(false);
+    }
+
+    if (myAliasTextField.getText().length() <= 3) {
+      myAliasErrorLabel.setText("podaj alias");
+      myAliasErrorLabel.setVisible(true);
+      result = false;
+    } else {
+      myAliasErrorLabel.setText("");
+      myAliasErrorLabel.setVisible(false);
+    }
+    return result;
   }
 
   private void onCancel() {
@@ -58,10 +109,11 @@ public class AddOrEditBuddyDialog extends JDialog {
     dispose();
   }
 
-  public static void main(String[] args) {
-    AddOrEditBuddyDialog dialog = new AddOrEditBuddyDialog();
-//    dialog.pack();
-    dialog.setSize(300, 200);
+  public static void main(String[] args) throws UnsupportedLookAndFeelException {
+    AddOrEditBuddyDialog dialog = new AddOrEditBuddyDialog(new Buddy(new ContactInfo("edimarfi", "tlen.pl", "Edi Marfi")), null);
+//    AddOrEditBuddyDialog dialog = new AddOrEditBuddyDialog();
+//    dialog.setSize(300, 250);
+    UIManager.setLookAndFeel(new Plastic3DLookAndFeel());
     dialog.setVisible(true);
 
     System.exit(0);
@@ -82,53 +134,85 @@ public class AddOrEditBuddyDialog extends JDialog {
    * @noinspection ALL
    */
   private void $$$setupUI$$$() {
-    contentPane = new JPanel();
-    contentPane.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
+    myContentPane = new JPanel();
+    myContentPane.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
     final JPanel panel1 = new JPanel();
-    panel1.setLayout(new FormLayout("fill:p:noGrow,left:4dlu:noGrow,fill:max(d;4px):grow,left:8px:noGrow,fill:p:noGrow,left:4dlu:noGrow,fill:max(p;4px):noGrow", "center:d:noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:4dlu:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:max(d;4px):grow,top:4dlu:noGrow,center:max(d;4px):noGrow"));
+    panel1.setLayout(new FormLayout("fill:p:noGrow,left:4dlu:noGrow,fill:max(d;4px):grow,left:8px:noGrow,fill:p:noGrow,left:4dlu:noGrow,fill:max(p;4px):noGrow", "center:d:noGrow,top:4dlu:noGrow,center:19px:noGrow,top:0px:noGrow,center:max(d;4px):noGrow,top:3dlu:noGrow,center:14px:noGrow,top:0px:noGrow,center:max(d;4px):noGrow,top:3dlu:noGrow,center:16px:noGrow,top:0px:noGrow,center:max(d;4px):noGrow,top:5dlu:noGrow,center:max(d;4px):grow,top:4dlu:noGrow,center:max(d;4px):noGrow"));
+    panel1.setOpaque(false);
     CellConstraints cc = new CellConstraints();
-    contentPane.add(panel1, new CellConstraints(1, 1, 1, 1, CellConstraints.DEFAULT, CellConstraints.FILL, new Insets(10, 10, 10, 10)));
+    myContentPane.add(panel1, new CellConstraints(1, 1, 1, 1, CellConstraints.DEFAULT, CellConstraints.FILL, new Insets(10, 10, 10, 10)));
     final JLabel label1 = new JLabel();
-    label1.setFont(new Font("Arial", Font.BOLD, 16));
+    label1.setFont(new Font("Arial", Font.BOLD, 20));
     label1.setHorizontalAlignment(0);
-    label1.setText("Add Buddy");
+    label1.setText("Add/Edit Buddy");
     panel1.add(label1, cc.xyw(1, 1, 7));
     final JLabel label2 = new JLabel();
+    label2.setFont(new Font(label2.getFont().getName(), Font.BOLD, label2.getFont().getSize()));
     label2.setHorizontalAlignment(4);
     label2.setText("login");
-    panel1.add(label2, cc.xy(1, 3));
-    textField1 = new JTextField();
-    panel1.add(textField1, cc.xyw(3, 3, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
+    panel1.add(label2, cc.xy(1, 5));
+    myLoginTextField = new JTextField();
+    panel1.add(myLoginTextField, cc.xyw(3, 5, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
     final JLabel label3 = new JLabel();
+    label3.setFont(new Font(label3.getFont().getName(), Font.BOLD, label3.getFont().getSize()));
     label3.setHorizontalAlignment(4);
     label3.setText("domain");
-    panel1.add(label3, cc.xy(1, 5));
+    panel1.add(label3, cc.xy(1, 9));
     final JLabel label4 = new JLabel();
+    label4.setFont(new Font(label4.getFont().getName(), Font.BOLD, label4.getFont().getSize()));
     label4.setHorizontalAlignment(4);
     label4.setText("alias");
-    panel1.add(label4, cc.xy(1, 7));
-    textField2 = new JTextField();
-    panel1.add(textField2, cc.xyw(3, 5, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
-    textField3 = new JTextField();
-    panel1.add(textField3, cc.xyw(3, 7, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
-    buttonCancel = new JButton();
-    buttonCancel.setText("cancel");
-    panel1.add(buttonCancel, cc.xy(5, 11));
-    buttonOK = new JButton();
-    buttonOK.setText("ok");
-    panel1.add(buttonOK, cc.xy(7, 11));
+    panel1.add(label4, cc.xy(1, 13));
+    myDomainTextField = new JTextField();
+    myDomainTextField.setEditable(false);
+    myDomainTextField.setText("tlen.pl");
+    panel1.add(myDomainTextField, cc.xyw(3, 9, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
+    myAliasTextField = new JTextField();
+    myAliasTextField.setEditable(true);
+    myAliasTextField.setText("");
+    panel1.add(myAliasTextField, cc.xyw(3, 13, 5, CellConstraints.FILL, CellConstraints.DEFAULT));
+    myCancelButton = new JButton();
+    myCancelButton.setText("cancel");
+    panel1.add(myCancelButton, cc.xy(5, 17));
+    mySaveButton = new JButton();
+    mySaveButton.setText("save");
+    panel1.add(mySaveButton, cc.xy(7, 17));
     final JPanel panel2 = new JPanel();
     panel2.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
-    panel1.add(panel2, cc.xy(3, 11, CellConstraints.DEFAULT, CellConstraints.FILL));
+    panel2.setOpaque(false);
+    panel1.add(panel2, cc.xy(3, 17, CellConstraints.DEFAULT, CellConstraints.FILL));
     final JPanel panel3 = new JPanel();
     panel3.setLayout(new FormLayout("fill:d:grow", "center:d:grow"));
-    panel1.add(panel3, cc.xyw(1, 9, 7, CellConstraints.DEFAULT, CellConstraints.FILL));
+    panel3.setOpaque(false);
+    panel1.add(panel3, cc.xyw(1, 15, 7, CellConstraints.DEFAULT, CellConstraints.FILL));
+    myLoginErrorLabel = new JLabel();
+    myLoginErrorLabel.setFont(new Font(myLoginErrorLabel.getFont().getName(), myLoginErrorLabel.getFont().getStyle(), 12));
+    myLoginErrorLabel.setForeground(new Color(-65536));
+    myLoginErrorLabel.setText("Label");
+    myLoginErrorLabel.setVisible(false);
+    panel1.add(myLoginErrorLabel, cc.xyw(3, 3, 5));
+    myDomainErrorLabel = new JLabel();
+    myDomainErrorLabel.setFont(new Font(myDomainErrorLabel.getFont().getName(), myDomainErrorLabel.getFont().getStyle(), 12));
+    myDomainErrorLabel.setForeground(new Color(-65536));
+    myDomainErrorLabel.setText("Label");
+    myDomainErrorLabel.setVisible(false);
+    panel1.add(myDomainErrorLabel, cc.xyw(3, 7, 5));
+    myAliasErrorLabel = new JLabel();
+    myAliasErrorLabel.setFont(new Font(myAliasErrorLabel.getFont().getName(), myAliasErrorLabel.getFont().getStyle(), 12));
+    myAliasErrorLabel.setForeground(new Color(-65536));
+    myAliasErrorLabel.setText("Label");
+    myAliasErrorLabel.setVisible(false);
+    panel1.add(myAliasErrorLabel, cc.xyw(3, 11, 5));
+    label2.setLabelFor(myLoginTextField);
+    label3.setLabelFor(myDomainTextField);
+    label4.setLabelFor(myAliasTextField);
+    myLoginErrorLabel.setLabelFor(myLoginTextField);
   }
 
   /**
    * @noinspection ALL
    */
   public JComponent $$$getRootComponent$$$() {
-    return contentPane;
+    return myContentPane;
   }
 }
